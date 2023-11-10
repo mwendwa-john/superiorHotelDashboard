@@ -1,0 +1,428 @@
+/* ------------- Poppins Google font ----------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* ----------- ROOT VARIABLES ------------- */
+:root {
+    --bs-gray-200: #e9ecef;
+
+
+    --color-primary: #7380ec;
+    /* --color-primary: #DA2129; */
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    /* --color-white: #FEFEFE; */
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    /* --color-background: #f6f6f9; */
+    --color-background: #EBF4F8;
+    --color-bg-light: #F1F8F0;
+    --color-auth-background: #5D4CC0;
+
+    --card-border-radius: 1.5rem;
+    --boarder-radius-1: 0.4rem;
+    --boarder-radius-2: 0.8rem;
+    --boarder-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --section-padding: 3rem;
+
+    --box-shadow-1: 0 2rem 3rem var(--color-light);
+    --box-shadow-2: 0 .25rem .25rem var(--color-light);
+
+    --normal-font-size: .875rem;
+    --medium-font-size: .875rem;
+    --small-font-size: .775rem;
+}
+
+/* start: global */
+html,body{
+    height: 100%;
+    overflow-x: hidden !important;
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-background);
+    color: var(--color-primary);
+    scroll-behavior: smooth;
+}
+
+.main-bg {
+    /* height: 100%;
+    width: 100%; */
+    background-color: var(--color-background);
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.profile-photo {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.text-muted {
+    color: var(--color-info-dark);
+    font-size: var(--normal-font-size);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+p {
+    color: var(--color-dark-variant);
+    font-size: var(--normal-font-size);
+}
+
+hr {
+    color: var(--color-primary);
+}
+
+.primary {
+    color: var(--color-primary);
+}
+
+.danger {
+    color: var(--color-danger);
+}
+
+.success {
+    color: var(--color-success);
+}
+
+.warning {
+    color: var(--color-warning);
+}
+
+.background {
+    background: var(--color-background);
+}
+
+/* Hide the Bootstrap dropdown icon */
+.dropdown-toggle::after {
+    display: none;
+}
+
+
+.button {
+    background: var(--color-primary);
+    border-radius: var(--card-border-radius);
+    border: none;
+    padding: .45rem 2rem;
+    color: var(--color-white);
+    box-shadow: var(--box-shadow-2);
+    transition: all .4s ease-in-out;
+}
+
+.btn-none{
+    border: none;
+    background: none;
+}
+
+.button:hover {
+    transform: scale(1.15);
+}
+
+.btn-danger {
+    background: var(--color-danger);
+}
+
+
+
+/* end: global */
+/* start: scrollbar */
+::-webkit-scrollbar {
+    width: .3rem;
+    height: .5rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 16px;
+    background-color: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-primary);
+}
+/* end: scrollbar */
+
+/* start: sidebar */
+#bdSidebar {
+    width: 260px !important;
+    background: var(--color-background) !important;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* z-index: 500; */
+    overflow-y: auto;
+    padding-top: 20px;
+    transition: all 0.35s ease-in-out;
+}
+
+/* sidebar collapsed */
+#bdSidebar.collapsed {
+    /* width: -260px !important; */
+    display: none;
+}
+
+.sidebar-logo {
+    cursor: pointer;
+    transition: transform .4s;
+}
+
+.sidebar-logo:hover {
+    transform: scale(1.15);
+}
+
+.sidebar-logo img {
+    width: 2.5rem;
+    height: 3rem;
+}
+
+.sidebar-logo .sidebar-brand {
+    color: var(--color-primary);
+    font-size: 0.87rem;
+}
+
+.sidebar-logo .sidebar-brand span {
+    color: var(--color-danger);
+}
+
+.sidebar .sidebar-nav{
+    color: var(--color-primary);
+}
+
+.sidebar .sidebar-nav li a {
+    font-weight: 500;
+    display: block;
+    align-items: center;
+    color: var(--color-info-dark);
+    padding: .55rem .85rem;
+    border-radius: 20rem;
+    font-size: .875rem;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+}
+
+.sidebar .sidebar-nav li a.active{
+    background: var(--color-light);
+    color: var(--color-primary);
+}
+
+.sidebar .sidebar-nav li a:hover{
+    background-color: var(--color-light);
+    margin-left: 1.5rem;
+    color: var(--color-primary);
+}
+
+.sidebar .sidebar-nav li a i{
+    width: 25px;
+    text-align: center;
+}
+
+.sidebar .sidebar-nav li a i.sidebar-menu-item-accordion {
+    /* color: red; */
+    transition: transform .4s;
+}
+
+.sidebar .sidebar-dropdown-menu-item {
+    margin-left: 2em;
+    list-style-type: circle;
+    line-height: .8em;
+}
+
+.sidebar-dropdown-menu-item > a {
+    overflow: hidden;
+}
+
+.sidebar .sidebar-menu-divider {
+    font-size: .75rem;
+    color: var(--color-primary);
+    transition: opacity .2s;
+    opacity: 1;
+    visibility: visible;
+    padding: .55rem .45rem;
+    cursor: pointer;
+}
+
+.sidebar-nav .nav-item .notification-badge {
+    background: var(--color-danger);
+    color: var(--color-white);
+    float: right;
+    padding: 2px 10px;
+    font-size: 11px;
+    border-radius: var(--boarder-radius-1);
+}
+/* start: sidebar */
+
+/* start: main body */
+main{
+    margin-left: 260px;
+}
+/* start: nav display on md */
+main .home-navbar {
+    align-items: center;
+    margin-top: 1rem;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow-1);
+}
+
+main .home-navbar .navbar-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .25rem;
+    margin: 0;
+}
+
+main .home-navbar .navbar-link:hover {
+    background-color: var(--bs-gray-200);
+}
+
+main .home-navbar .nav-profile-photo {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 0;
+}
+/* end: nav display on md */
+
+main .custom-card {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow-1);
+    transition: all 300ms ease;
+}
+
+main .custom-card:hover {
+    transform: scale(1.15);
+}
+
+/* start: summery section */
+.custom-card-icon {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bs-light);
+    font-size: 1.5rem;
+    border-radius: 50%;
+}
+
+.icon-primary {
+    background: var(--color-primary);
+}
+
+.icon-success {
+    background: var(--color-success);
+}
+
+.icon-danger {
+    background: var(--color-danger);
+}
+
+.icon-warning {
+    background: var(--color-warning);
+}
+
+.summary-icon {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    border-radius: 50%;
+}
+
+/* end: summery section */
+
+/* start: employee section */
+.employee-select {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .25rem;
+    border: .15rem solid var(--color-primary);
+    color: var(--color-primary);
+    transition: all 300ms ease;
+}
+.employee-select:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.employee-card {
+    height: 160px;
+    cursor: pointer;
+    background: var(--color-white);
+    /* padding: var(--card-padding); */
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow-1);
+    transition: all 300ms ease;
+    
+}
+
+.card-img-top{
+    border-radius: 50%;
+    height: 4em !important;
+    width: 4em !important;
+    position: relative;
+    /* left: 30%; */
+    /* top: -60px; */
+    object-fit: cover;
+    margin-top: 1em;
+}
+
+.employee-card:hover {
+    transform: scale(1.15);
+}
+
+.employee-card-body{
+    padding-top: 1em;
+}
+
+.employee-card-title{
+    font-size: 1em;
+}
+/* start: employee section */
+
+
+/* end: main body */
+
+
+/* start: media queries */
+@media (max-width: 768px) {
+    main {
+        margin-left: 0;
+    }
+}
+
+/* end: media queries */

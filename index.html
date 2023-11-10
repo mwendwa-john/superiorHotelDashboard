@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="assets/images/superiorLogo.png" type="image/x-icon">
+    <title>SHK</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Fontawsome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container-fluid p-0 d-flex h-100">
+        <!-- start: sidebar -->
+        <div id="bdSidebar" class="sidebar d-flex flex-column flex-shrink-0 p-3 background text-white offcanvas-md offcanvas-start">
+            <a href="#" class="navbar-brand">
+                <a href="#" class="sidebar-logo d-flex mx-auto">
+                    <img src="assets/images/superiorLogo.png" alt="logo" class="mx-auto">
+                    <h4 class="sidebar-brand text-center m-2">Superior Hotel <br><span>Kenya</span></h4>
+                </a>
+            </a>
+            <hr class="sidebar-hr">
+            <ul class="sidebar-nav nav nav-pills flex-column mb-auto">
+                <li class="sidebar-menu-divider mt-6 mb-1 text-uppercase">Main</li>
+                <li class="nav-item mb-1">
+                    <a href="#" class="active">
+                        <i class="fa-solid fa-chart-simple sidebar-menu-item-icon"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="nav-item mb-1">
+                    <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseApps" aria-expanded="false" aria-controls="collapseApps">
+                        <i class="fa-solid fa-shapes sidebar-menu-item-icon"></i>
+                        Apps
+                        <i class="fa-solid fa-angle-down sidebar-menu-item-accordion"></i>
+                    </a>
+                    <ul id="collapseApps" class="list-unstyled collapse ms-1" data-bs-parent="#bdSidebar">
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Chat
+                                <span class="notification-badge">5</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Calender
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-menu-divider mt-6 mb-1 text-uppercase">Employees</li>
+                <li class="sidebar-menu-item mb-1">
+                    <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseEmployees" aria-expanded="false" aria-controls="collapseEmployees">
+                        <i class="fa-solid fa-users sidebar-menu-item-icon"></i>
+                        Employees
+                        <i class="fa-solid fa-angle-down sidebar-menu-item-accordion ms-auto"></i>
+                    </a>
+                    <ul id="collapseEmployees" class="list-unstyled collapse ms-1" data-bs-parent="#bdSidebar">
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="employees.html" class="">
+                                All Employees
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Holidays
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Leaves(Admin)
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Leaves(Employee)
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Leave Settings
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Attendance(Admin)
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Attendance(Employee)
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Departments
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Shifts & Schedule
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Overtime
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item mb-1">
+                    <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseProjects" aria-expanded="false" aria-controls="collapseProjects">
+                        <i class="fa-solid fa-bars-progress sidebar-menu-item-icon"></i>
+                        Projects
+                        <i class="fa-solid fa-angle-down sidebar-menu-item-accordion"></i>
+                    </a>
+                    <ul id="collapseProjects" class="list-unstyled collapse ms-1" data-bs-parent="#bdSidebar">
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Projects
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Tasks
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Task Board
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item mb-1">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-receipt sidebar-menu-item-icon"></i>
+                        Tickets
+                    </a>
+                </li>
+
+                <li class="sidebar-menu-divider mt-6 mb-1 text-uppercase">HR</li>
+
+                <li class="nav-item mb-1">
+                    <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapsePayroll" aria-expanded="false" aria-controls="collapsePayroll">
+                        <i class="fa-solid fa-sack-dollar sidebar-menu-item-icon"></i>
+                        Payroll
+                        <i class="fa-solid fa-angle-down sidebar-menu-item-accordion"></i>
+                    </a>
+                    <ul id="collapsePayroll" class="list-unstyled collapse ms-1" data-bs-parent="#bdSidebar">
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Employee Salary
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Payslip
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Payroll Items
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item mb-1">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-clipboard-list sidebar-menu-item-icon"></i>
+                        Policies
+                    </a>
+                </li>
+
+                <li class="nav-item mb-1">
+                    <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseReports" aria-expanded="false" aria-controls="collapseReports">
+                        <i class="fa-solid fa-mortar-pestle sidebar-menu-item-icon"></i>
+                        Reports
+                        <i class="fa-solid fa-angle-down sidebar-menu-item-accordion"></i>
+                    </a>
+                    <ul id="collapseReports" class="list-unstyled collapse ms-1" data-bs-parent="#bdSidebar">
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Project report
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Task report
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Employee report
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Payroll report
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Attendance report
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Leave report
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Daily report
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-menu-divider mt-6 mb-1 text-uppercase">Performance</li>
+
+                <li class="nav-item mb-1">
+                    <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapsePerformance" aria-expanded="false" aria-controls="collapsePerformance">
+                        <i class="fa-solid fa-gauge-high sidebar-menu-item-icon"></i>
+                        Performance
+                        <i class="fa-solid fa-angle-down sidebar-menu-item-accordion"></i>
+                    </a>
+                    <ul id="collapsePerformance" class="list-unstyled collapse ms-1" data-bs-parent="#bdSidebar">
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Perf - Review
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Perf - Appraisal
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item mb-1">
+                    <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTraining" aria-expanded="false" aria-controls="collapseTraining">
+                        <i class="fa-solid fa-utensils sidebar-menu-item-icon"></i>
+                        Training
+                        <i class="fa-solid fa-angle-down sidebar-menu-item-accordion"></i>
+                    </a>
+                    <ul id="collapseTraining" class="list-unstyled collapse ms-1" data-bs-parent="#bdSidebar">
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Training List
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Trainers
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Training Type
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item mb-1">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-pen-fancy sidebar-menu-item-icon"></i>
+                        Resignation
+                    </a>
+                </li>
+
+                <li class="nav-item mb-1">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-hands sidebar-menu-item-icon"></i>
+                        Termination
+                    </a>
+                </li>
+
+                <li class="sidebar-menu-divider mt-6 mb-1 text-uppercase">Administration</li>
+
+                <li class="nav-item mb-1">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-shop sidebar-menu-item-icon"></i>
+                        Assets
+                    </a>
+                </li>
+
+                <li class="nav-item mb-1">
+                    <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseJobs" aria-expanded="false" aria-controls="collapseJobs">
+                        <i class="fa-solid fa-toolbox sidebar-menu-item-icon"></i>
+                        Jobs
+                        <i class="fa-solid fa-angle-down sidebar-menu-item-accordion"></i>
+                    </a>
+                    <ul id="collapseJobs" class="list-unstyled collapse ms-1" data-bs-parent="#bdSidebar">
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Jobs Dashboards
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Resumes
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Candidate List
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Shortlist Candidates
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Interview Questions
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Offer Approvals
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Onboarding
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item mb-1">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-feather-pointed sidebar-menu-item-icon"></i>
+                        Activities
+                    </a>
+                </li>
+
+                <li class="sidebar-menu-divider mt-6 mb-1 text-uppercase">System</li>
+
+                <li class="nav-item mb-1">
+                    <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseProfile" aria-expanded="false" aria-controls="collapseProfile">
+                        <i class="fa-solid fa-user sidebar-menu-item-icon"></i>
+                        My Profile
+                        <i class="fa-solid fa-angle-down sidebar-menu-item-accordion"></i>
+                    </a>
+                    <ul id="collapseProfile" class="list-unstyled collapse ms-1" data-bs-parent="#bdSidebar">
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Settings
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                LogOut
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-menu-divider mt-6 mb-1 text-uppercase">Custom</li>
+                <li class="nav-item mb-1">
+                    <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                        <i class="fa-solid fa-file-invoice sidebar-menu-item-icon"></i>
+                        Pages
+                        <i class="fa-solid fa-angle-down sidebar-menu-item-accordion"></i>
+                    </a>
+                    <ul id="collapsePages" class="list-unstyled collapse ms-1" data-bs-parent="#bdSidebar">
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Landing
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Login
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="blank.html" class="">
+                                Blank
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                404
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                401
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item mb-1">
+                    <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseWidgets" aria-expanded="false" aria-controls="collapseWidgets">
+                        <i class="fa-solid fa-toolbox sidebar-menu-item-icon"></i>
+                        Widgets
+                        <i class="fa-solid fa-angle-down sidebar-menu-item-accordion"></i>
+                    </a>
+                    <ul id="collapseWidgets" class="list-unstyled collapse ms-1" data-bs-parent="#bdSidebar">
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Form
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item mb-1">
+                            <a href="#" class="">
+                                Table
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr>
+            <div class="d-flex sidebar-footer dropdown open">
+                <img src="assets/images/profile-1.jpg" class="img-fluid profile-photo me-2" alt="">
+                <span class="primary text-center">
+                    <h6 class="mt-1 mb-0">Mwendwa John</h6>
+                    <small class="text-muted small">Developer</small>
+                </span>
+                <a href="#" class="btn dropdown-toggle primary" type="button" id="triggerId" data-bs-toggle="collapse" arex aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="triggerId">
+                    <a href="#" class="dropdown-item">Action 1</a>
+                    <a href="#" class="dropdown-item">Action 2</a>
+                </div>
+            </div>
+        </div>
+        <!-- end: sidebar -->
+        <!-- start: main page -->
+        <main class="main-bg flex-fill">
+            <div class="row">
+                <!-- start: navigation menus -->
+                <div class="col-12">
+                    <!-- start: nav display on md -->
+                    <nav class="container-fluid p-2 d-flex d-md-none px-3 py-2 home-navbar mobile">
+                        <a href="index.html" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+                        <span class="ms-3">Dashboard</span>
+
+                        <div class="nav-item dropdown">
+                            <a class="cursor-pointer primary mx-1 dropdown-toggle navbar-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown mx-1 me-3 d-sm-block">
+                            <div class="cursor-pointer primary dropdown-toggle navbar-link" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-bell"></i>
+                            </div>
+
+                            <div class="dropdown-menu navdropdown-menu">
+                                <div class="navdropdown-title">
+                                    <h5 class="p-3 text-center">Notifications</h5>
+                                </div>
+                                <div class="navdropdown-body">
+                                    <ul class="list-group list-group-flush d-flex justify-content-between align-items-start">
+                                        <li class="dropdown-item">
+                                            <a href="#">
+                                                <div class="me-auto">
+                                                    <div class="notification-heading">Custom Heading</div>
+                                                    <p class="notification-body">Content for list item</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="dropdown-item">
+                                            <a href="#">
+                                                <div class="me-auto">
+                                                    <div class="notification-heading">Custom Heading</div>
+                                                    <p class="notification-body">Content for list item</p>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li class="dropdown-item">
+                                            <a href="#">
+                                                <div class="me-auto">
+                                                    <div class="notification-heading">Custom Heading</div>
+                                                    <p class="notification-body">Content for list item</p>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li class="dropdown-item">
+                                            <a href="#">
+                                                <div class="me-auto">
+                                                    <div class="notification-heading">Custom Heading</div>
+                                                    <p class="notification-body">Content for list item</p>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <div class="d-flex align-items-center cursor-pointer dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="me-2 d-none d-sm-block">Mwendwa John</span>
+                                <img class="nav-profile-photo m-1" src="assets/images/profile-1.jpg" alt="Image">
+                            </div>
+                            <ul class="dropdown-menu m-2" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">
+                                    <i class="fa-solid fa-layer-group me-2"></i>
+                                    Dashboard</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#"> 
+                                    <i class="fa-solid fa-person-shelter me-2"></i> 
+                                    Profile </a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">
+                                    <i class="fa-solid fa-gear me-2"></i> 
+                                    Settings</a>
+                                </li>
+                                <!-- Button trigger modal -->
+                                <li class="dropdown-item cursor-pointer" data-bs-toggle="modal" data-bs-target="#logOutModal">
+                                    <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+                                    Log Out
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- end: nav display on md -->
+
+                    <!-- start: nav display on lg only -->
+                    <div class="container-fluid d-none d-lg-block">
+                        <nav class="px-3 py-2 d-flex home-navbar">
+                            <i class="fa-brands fa-slack me-3 d-none d-md-block cursor-pointer" id="sidebarToggle"></i>
+                            <span class="cursor-pointer mb-0 me-auto">Dashboard</span>
+    
+                            <div class="nav-item dropdown">
+                                <a class="cursor-pointer primary mx-1 dropdown-toggle navbar-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+    
+                            <div class="dropdown mx-1 me-3 d-sm-block">
+                                <div class="cursor-pointer primary dropdown-toggle navbar-link" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-bell"></i>
+                                </div>
+    
+                                <div class="dropdown-menu navdropdown-menu">
+                                    <div class="navdropdown-title">
+                                        <h5 class="p-3 text-center">Notifications</h5>
+                                    </div>
+                                    <div class="navdropdown-body">
+                                        <ul class="list-group list-group-flush d-flex justify-content-between align-items-start">
+                                            <li class="dropdown-item">
+                                                <a href="#">
+                                                    <div class="me-auto">
+                                                        <div class="notification-heading">Custom Heading</div>
+                                                        <p class="notification-body">Content for list item</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="dropdown-item">
+                                                <a href="#">
+                                                    <div class="me-auto">
+                                                        <div class="notification-heading">Custom Heading</div>
+                                                        <p class="notification-body">Content for list item</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+    
+                                            <li class="dropdown-item">
+                                                <a href="#">
+                                                    <div class="me-auto">
+                                                        <div class="notification-heading">Custom Heading</div>
+                                                        <p class="notification-body">Content for list item</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+    
+                                            <li class="dropdown-item">
+                                                <a href="#">
+                                                    <div class="me-auto">
+                                                        <div class="notification-heading">Custom Heading</div>
+                                                        <p class="notification-body">Content for list item</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+    
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="dropdown">
+                                <div class="d-flex align-items-center cursor-pointer dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="me-2 d-none d-sm-block">Mwendwa John</span>
+                                    <img class="nav-profile-photo m-1" src="assets/images/profile-1.jpg" alt="Image">
+                                </div>
+                                <ul class="dropdown-menu m-2" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">
+                                        <i class="fa-solid fa-layer-group me-2"></i>
+                                        Dashboard</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"> 
+                                        <i class="fa-solid fa-person-shelter me-2"></i> 
+                                        Profile </a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">
+                                        <i class="fa-solid fa-gear me-2"></i> 
+                                        Settings</a>
+                                    </li>
+                                    <!-- Button trigger modal -->
+                                    <li class="dropdown-item cursor-pointer" data-bs-toggle="modal" data-bs-target="#logOutModal">
+                                        <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+                                        Log Out
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- end: nav display on lg only -->
+                </div>
+                <!-- end: navigation menus -->
+
+                <!-- start: main page content -->
+                
+                <div class="col-12">
+                    <div class="p-4">
+                        <!-- start: Summary -->
+                    <section class="summary-section">
+                        <div class="row px-lg-3 px-sm-4 g-3">
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <a href="#" class="custom-card d-flex justify-content-between">
+                                    <i class="fa-solid fa-hand-holding-dollar custom-card-icon mb-2 icon-primary"></i>
+                                    <div class="wrapper">
+                                        <h1 class="primary">35</h1>
+                                        <div class="float-end text-muted">Casuals</div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <a href="#" class="custom-card d-flex justify-content-between">
+                                    <i class="fa-solid fa-cart-shopping custom-card-icon mb-2 icon-success"></i>
+                                    <div>
+                                        <h1 class="success">6,435</h1>
+                                        <div class="float-end text-muted">Employees</div>
+                                    </div>
+                                </a>
+                            </div>
+        
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <a href="#" class="custom-card d-flex justify-content-between">
+                                    <i class="fa-solid fa-paintbrush custom-card-icon mb-2 icon-danger"></i>
+                                    <div class="wrapper">
+                                        <h1 class="danger">35</h1>
+                                        <div class="float-end text-muted">Tasks</div>
+                                    </div>
+                                </a>
+                            </div>
+        
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <a href="#" class="custom-card d-flex justify-content-between">
+                                    <i class="fa-solid fa-handshake-angle custom-card-icon mb-2 icon-warning"></i>
+                                    <div class="wrapper">
+                                        <h2 class="warning">5</h2>
+                                        <div class="float-end text-muted">Projects</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- end: Summary -->
+                    </div>
+                </div>
+                <!-- end: main page content -->
+            </div>
+            
+            <!-- start: footer -->
+            <footer>
+                <div class="row px-3">
+                    <div class="col-12">
+                        <div class="text-muted text-center">
+                            <p class="primary">
+                                &copy; <span id="currentYear"></span> Superior Hotels Kenya | Human Resource Management System
+                            </p>
+                        </div>
+                        <script>
+                            const currentYear = new Date().getFullYear();
+                            document.getElementById("currentYear").textContent = currentYear;
+                        </script>
+                    </div>
+                </div>
+            </footer>
+            <!-- end: footer -->
+        </main>
+        <!-- end: main page -->
+        
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/main.js"></script>
+</body>
+</html>
