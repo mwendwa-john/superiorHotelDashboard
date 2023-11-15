@@ -7,4 +7,15 @@ toggler.addEventListener("click", function() {
 
 // end: toggle sidebar
 
+// start: toggle sidebar active link
+const navLinkEls = document.querySelectorAll('.sidebar-menu-item');
+
+navLinkEls.forEach(navLinkEl => {
+    navLinkEl.addEventListener('click', () => {
+        document.querySelector('.active').classList.remove('active');
+        navLinkEl.classList.add('active');
+    });
+});
+// end: toggle sidebar active link
+
 });
